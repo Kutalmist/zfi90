@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZFI_GW_001_SRV" xml:lang="tr" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="impKunnr" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Option"/>
+                </Key>
+                <Property Name="Sign" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Type of SIGN component in row type of a Ranges type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Option" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Type of OPTION component in row type of a Ranges type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Low" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Müşteri" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="High" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Müşteri" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="impVkgrp" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Option"/>
+                </Key>
+                <Property Name="Sign" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Type of SIGN component in row type of a Ranges type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Option" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Type of OPTION component in row type of a Ranges type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Low" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Satış grubu" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="High" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Satış grubu" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="impBran1" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Option"/>
+                </Key>
+                <Property Name="Sign" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Type of SIGN component in row type of a Ranges type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Option" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Type of OPTION component in row type of a Ranges type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Low" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Statüsü" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="High" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Statüsü" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="impRegio" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Option"/>
+                </Key>
+                <Property Name="Sign" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Type of SIGN component in row type of a Ranges type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Option" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Type of OPTION component in row type of a Ranges type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Low" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Bölge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="High" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Bölge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="expBapiReturn" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="İleti tipi" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Message Class" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Number" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Message Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Message" Type="Edm.String" Nullable="false" MaxLength="220" sap:unicode="false" sap:label="İleti metni" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LogNo" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Günlük no." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LogMsgNo" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="İleti numarası" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MessageV1" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MessageV2" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MessageV3" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MessageV4" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Parameter" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Parametre adı" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Row" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Parametre st." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Field" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Alan adı" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Mantıksal sistem" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="expAlv" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Kunnr"/>
+                </Key>
+                <Property Name="Kunnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Müşteri" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bran1" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Statüsü" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vtext" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bezei" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Tanım" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name1" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Ad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name2" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="İkinci ad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Street" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Sokak" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="City2" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="İlçe" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="City1" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="İl" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Stcd1" Type="Edm.String" Nullable="false" MaxLength="16" sap:unicode="false" sap:label="Vergi Dairesi" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Stcd2" Type="Edm.String" Nullable="false" MaxLength="11" sap:unicode="false" sap:label="Vergi Kimlik No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Stcd3" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="T.C. Kimlik No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Telefon" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FaxNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Faks" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MobNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Telefon" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ciro" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar (UPB)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CiroUsd" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar (UPB)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CiroEur" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar (UPB)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CiroTry" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar (UPB)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AcSip" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AcSipEur" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AcSipUsd" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AcSipTry" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AcSipSap" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TacSip" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TacSipEur" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TacSipUsd" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TacSipTry" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Irs" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IrsEur" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IrsUsd" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IrsTry" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Net değer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Kars" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar (UPB)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="KarsEur" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="KarsUsd" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="KarsTry" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iade" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar (UPB)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IadeEur" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IadeUsd" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IadeTry" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ivc" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IvcUsd" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IvcEur" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IvcTry" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IvcUp" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Skfor" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Alacaklar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ssobl" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Özel borçlar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Oeikw" Type="Edm.Decimal" Precision="20" Scale="3" sap:unicode="false" sap:label="Açık siparişler" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Olikw" Type="Edm.Decimal" Precision="20" Scale="3" sap:unicode="false" sap:label="Açık teslimat" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ofakw" Type="Edm.Decimal" Precision="20" Scale="3" sap:unicode="false" sap:label="Açık ftrl.blg." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ch" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChUsd" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChEur" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChTry" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChUp" Type="Edm.Decimal" Precision="14" Scale="3" sap:unicode="false" sap:label="Tutar (UPB)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GenKreLim" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Kredi limiti" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CarHesLim" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Kredi limiti" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="KulKreLim" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Kredi limiti" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="KulCarLim" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Kredi limiti" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Dbkid" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Ad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Olimit" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Banka Limiti" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tkborc" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Garanti Alt.Fatura" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="KurEur" Type="Edm.Decimal" Precision="9" Scale="5" sap:unicode="false" sap:label="Çeviri kuru" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="KurUsd" Type="Edm.Decimal" Precision="9" Scale="5" sap:unicode="false" sap:label="Çeviri kuru" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zi05" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="ZI05" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zi06" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="ZI06" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="GetMusteriKrediLimiti" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Value"/>
+                </Key>
+                <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="NavImpKunnr" Relationship="ZFI_GW_001_SRV.AssImpKunnr" FromRole="FromRole_AssImpKunnr" ToRole="ToRole_AssImpKunnr"/>
+                <NavigationProperty Name="NavImpVkgrp" Relationship="ZFI_GW_001_SRV.AssImpVkgrp" FromRole="FromRole_AssImpVkgrp" ToRole="ToRole_AssImpVkgrp"/>
+                <NavigationProperty Name="NavImpBran1" Relationship="ZFI_GW_001_SRV.AssImpBran1" FromRole="FromRole_AssImpBran1" ToRole="ToRole_AssImpBran1"/>
+                <NavigationProperty Name="NavExpAlv" Relationship="ZFI_GW_001_SRV.AssExpAlv" FromRole="FromRole_AssExpAlv" ToRole="ToRole_AssExpAlv"/>
+                <NavigationProperty Name="NavImpRegio" Relationship="ZFI_GW_001_SRV.AssImpRegio" FromRole="FromRole_AssImpRegio" ToRole="ToRole_AssImpRegio"/>
+                <NavigationProperty Name="NavExpBapiReturn" Relationship="ZFI_GW_001_SRV.AssExpBapiReturn" FromRole="FromRole_AssExpBapiReturn" ToRole="ToRole_AssExpBapiReturn"/>
+            </EntityType>
+            <Association Name="AssImpKunnr" sap:content-version="1">
+                <End Type="ZFI_GW_001_SRV.GetMusteriKrediLimiti" Multiplicity="1" Role="FromRole_AssImpKunnr"/>
+                <End Type="ZFI_GW_001_SRV.impKunnr" Multiplicity="*" Role="ToRole_AssImpKunnr"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_AssImpKunnr">
+                        <PropertyRef Name="Value"/>
+                    </Principal>
+                    <Dependent Role="ToRole_AssImpKunnr">
+                        <PropertyRef Name="Option"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="AssImpRegio" sap:content-version="1">
+                <End Type="ZFI_GW_001_SRV.GetMusteriKrediLimiti" Multiplicity="1" Role="FromRole_AssImpRegio"/>
+                <End Type="ZFI_GW_001_SRV.impRegio" Multiplicity="*" Role="ToRole_AssImpRegio"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_AssImpRegio">
+                        <PropertyRef Name="Value"/>
+                    </Principal>
+                    <Dependent Role="ToRole_AssImpRegio">
+                        <PropertyRef Name="Option"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="AssImpVkgrp" sap:content-version="1">
+                <End Type="ZFI_GW_001_SRV.GetMusteriKrediLimiti" Multiplicity="1" Role="FromRole_AssImpVkgrp"/>
+                <End Type="ZFI_GW_001_SRV.impVkgrp" Multiplicity="*" Role="ToRole_AssImpVkgrp"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_AssImpVkgrp">
+                        <PropertyRef Name="Value"/>
+                    </Principal>
+                    <Dependent Role="ToRole_AssImpVkgrp">
+                        <PropertyRef Name="Option"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="AssExpBapiReturn" sap:content-version="1">
+                <End Type="ZFI_GW_001_SRV.GetMusteriKrediLimiti" Multiplicity="1" Role="FromRole_AssExpBapiReturn"/>
+                <End Type="ZFI_GW_001_SRV.expBapiReturn" Multiplicity="*" Role="ToRole_AssExpBapiReturn"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_AssExpBapiReturn">
+                        <PropertyRef Name="Value"/>
+                    </Principal>
+                    <Dependent Role="ToRole_AssExpBapiReturn">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="AssExpAlv" sap:content-version="1">
+                <End Type="ZFI_GW_001_SRV.GetMusteriKrediLimiti" Multiplicity="1" Role="FromRole_AssExpAlv"/>
+                <End Type="ZFI_GW_001_SRV.expAlv" Multiplicity="*" Role="ToRole_AssExpAlv"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_AssExpAlv">
+                        <PropertyRef Name="Value"/>
+                    </Principal>
+                    <Dependent Role="ToRole_AssExpAlv">
+                        <PropertyRef Name="Kunnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="AssImpBran1" sap:content-version="1">
+                <End Type="ZFI_GW_001_SRV.GetMusteriKrediLimiti" Multiplicity="1" Role="FromRole_AssImpBran1"/>
+                <End Type="ZFI_GW_001_SRV.impBran1" Multiplicity="*" Role="ToRole_AssImpBran1"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_AssImpBran1">
+                        <PropertyRef Name="Value"/>
+                    </Principal>
+                    <Dependent Role="ToRole_AssImpBran1">
+                        <PropertyRef Name="Option"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZFI_GW_001_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="impKunnrSet" EntityType="ZFI_GW_001_SRV.impKunnr" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="impVkgrpSet" EntityType="ZFI_GW_001_SRV.impVkgrp" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="impBran1Set" EntityType="ZFI_GW_001_SRV.impBran1" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="impRegioSet" EntityType="ZFI_GW_001_SRV.impRegio" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="expBapiReturnSet" EntityType="ZFI_GW_001_SRV.expBapiReturn" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="expAlvSet" EntityType="ZFI_GW_001_SRV.expAlv" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="GetMusteriKrediLimitiSet" EntityType="ZFI_GW_001_SRV.GetMusteriKrediLimiti" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="AssImpRegioSet" Association="ZFI_GW_001_SRV.AssImpRegio" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="GetMusteriKrediLimitiSet" Role="FromRole_AssImpRegio"/>
+                    <End EntitySet="impRegioSet" Role="ToRole_AssImpRegio"/>
+                </AssociationSet>
+                <AssociationSet Name="AssImpVkgrpSet" Association="ZFI_GW_001_SRV.AssImpVkgrp" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="GetMusteriKrediLimitiSet" Role="FromRole_AssImpVkgrp"/>
+                    <End EntitySet="impVkgrpSet" Role="ToRole_AssImpVkgrp"/>
+                </AssociationSet>
+                <AssociationSet Name="AssImpKunnrSet" Association="ZFI_GW_001_SRV.AssImpKunnr" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="GetMusteriKrediLimitiSet" Role="FromRole_AssImpKunnr"/>
+                    <End EntitySet="impKunnrSet" Role="ToRole_AssImpKunnr"/>
+                </AssociationSet>
+                <AssociationSet Name="AssExpAlvSet" Association="ZFI_GW_001_SRV.AssExpAlv" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="GetMusteriKrediLimitiSet" Role="FromRole_AssExpAlv"/>
+                    <End EntitySet="expAlvSet" Role="ToRole_AssExpAlv"/>
+                </AssociationSet>
+                <AssociationSet Name="AssImpBran1Set" Association="ZFI_GW_001_SRV.AssImpBran1" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="GetMusteriKrediLimitiSet" Role="FromRole_AssImpBran1"/>
+                    <End EntitySet="impBran1Set" Role="ToRole_AssImpBran1"/>
+                </AssociationSet>
+                <AssociationSet Name="AssExpBapiReturnSet" Association="ZFI_GW_001_SRV.AssExpBapiReturn" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="GetMusteriKrediLimitiSet" Role="FromRole_AssExpBapiReturn"/>
+                    <End EntitySet="expBapiReturnSet" Role="ToRole_AssExpBapiReturn"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="http://fioritserver.sadal.local:8000/sap/opu/odata/sap/ZFI_GW_001_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://fioritserver.sadal.local:8000/sap/opu/odata/sap/ZFI_GW_001_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,196 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:table="sap.ui.table" controllerName="com.sadal.zfi90.controller.Main"
+	xmlns:form="sap.ui.layout.form">
+	<Page showHeader="false">
+		<content>
+			<VBox class="sapUiContentPadding">
+				<!--Filtre degeleri-->
+				<FlexBox class="columns">
+					<form:SimpleForm id="frmFilter" maxContainerCols="3" editable="true" layout="ResponsiveGridLayout" labelSpanL="5" labelSpanM="5"
+						emptySpanL="0" emptySpanM="0" columnsL="3" columnsM="3">
+						<core:Title text=""/>
+						<Label text="{i18n>musteri}"/>
+						<Input value="{mainModel>/Musteri}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onMusteriSearchHelp"/>
+						<Label text="{i18n>musteriTemsilcisi}"/>
+						<Input value="{mainModel>/MusteriTemsilcisi}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onMusteriTemsilcisiSearchHelp"/>
+						<Label text="{i18n>statusu}"/>
+						<Input value="{mainModel>/Statusu}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onStatusSearchHelp"/>
+						<Label text="{i18n>il}"/>
+						<Input value="{mainModel>/Il}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onIlSearchHelp"/>
+						<Label/>
+						<Button text="{i18n>listele}" width="7rem" press="onPressListele"/>
+						<form:layoutData>
+							<FlexItemData growFactor="1" baseSize="0" styleClass="sapUiTinyMargin"/>
+						</form:layoutData>
+						<core:Title text=""/>
+					</form:SimpleForm>
+				</FlexBox>
+				<!--Liste-->
+
+				<!-- <Table items="{mainModel>/MusteriKrediLimitListesi}" inset="false" alternateRowColors="true" mode="None" sticky="ColumnHeaders">
+					<columns>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>musteri}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>statusu}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>tanim}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>musteriTemsilcisi}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>ad}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>ikinciAd}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>sokak}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>ilce}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>il}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>vergiDairesi}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>vergiKimlikNo}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>tcKimlikNo}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>telefon}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>faks}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>mobilTelefon}"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="{i18n>bekleyenSiparisleriTry}"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<Text text="{mainModel>musteri}"/>
+								<Text text="{mainModel>statusu}"/>
+								<Text text="{mainModel>tanim}"/>
+								<Text text="{mainModel>musteriTemsilcisi}"/>
+								<Text text="{mainModel>ad}"/>
+								<Text text="{mainModel>ikinciAd}"/>
+								<Text text="{mainModel>sokak}"/>
+								<Text text="{mainModel>ilce}"/>
+								<Text text="{mainModel>il}"/>
+								<Text text="{mainModel>vergiDairesi}"/>
+								<Text text="{mainModel>vergiKimlikNo}"/>
+								<Text text="{mainModel>tcKimlikNo}"/>
+								<Text text="{mainModel>telefon}"/>
+								<Text text="{mainModel>faks}"/>
+								<Text text="{mainModel>mobilTelefon}"/>
+								<Text text="{mainModel>bekleyenSiparisleriTry}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table> -->
+
+
+
+
+				<table:Table selectionMode="None" enableColumnReordering="false" ariaLabelledBy="title"
+				rows="{mainModel>/MusteriKrediLimitListesi}" showNoData="true" noData="{i18n>noRecordFoundText}"
+				>
+					<table:columns>
+						<table:Column width="10rem" label="{i18n>musteri}" filterProperty="Kunnr" sortProperty="Kunnr">
+							<table:template>
+								<Text text="{mainModel>Kunnr}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="8rem" label="{i18n>statusu}" filterProperty="Bran1" sortProperty="Bran1">
+							<table:template>
+								<Text text="{mainModel>Bran1}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="8rem" label="{i18n>tanim}" filterProperty="Vtext" sortProperty="Vtext">
+							<table:template>
+								<Text text="{mainModel>Vtext}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="12rem" label="{i18n>musteriTemsilcisi}" filterProperty="Bezei" sortProperty="Bezei">
+							<table:template>
+								<Text text="{mainModel>Bezei}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="10rem" label="{i18n>ad}" filterProperty="Name1" sortProperty="Name1">
+							<table:template>
+								<Text text="{mainModel>Name1}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="10rem" label="{i18n>ikinciAd}" filterProperty="Name2" sortProperty="Name2">
+							<table:template>
+								<Text text="{mainModel>Name2}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="8rem" label="{i18n>sokak}" filterProperty="Street" sortProperty="Street">
+							<table:template>
+								<Text text="{mainModel>Street}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="8rem" label="{i18n>ilce}" filterProperty="City2" sortProperty="City2">
+							<table:template>
+								<Text text="{mainModel>City2}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="8rem" label="{i18n>il}" filterProperty="City1" sortProperty="City1">
+							<table:template>
+								<Text text="{mainModel>City1}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="8rem" label="{i18n>vergiDairesi}" filterProperty="Stcd1" sortProperty="Stcd1">
+							<table:template>
+								<Text text="{mainModel>Stcd1}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="8rem" label="{i18n>vergiKimlikNo}" filterProperty="Stcd2" sortProperty="Stcd2">
+							<table:template>
+								<Text text="{mainModel>Stcd2}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="8rem" label="{i18n>tcKimlikNo}" filterProperty="Stcd3" sortProperty="Stcd3">
+							<table:template>
+								<Text text="{mainModel>Stcd3}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="8rem" label="{i18n>telefon}" filterProperty="TelNumber" sortProperty="TelNumber">
+							<table:template>
+								<Text text="{mainModel>TelNumber}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="8rem" label="{i18n>faks}" filterProperty="FaxNumber" sortProperty="FaxNumber">
+							<table:template>
+								<Text text="{mainModel>FaxNumber}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="8rem" label="{i18n>mobilTelefon}" filterProperty="MobNumber" sortProperty="MobNumber">
+							<table:template>
+								<Text text="{mainModel>MobNumber}"/>
+							</table:template>
+						</table:Column>
+						<table:Column width="12rem" label="{i18n>bekleyenSiparisleriTry}" filterProperty="CiroTry" sortProperty="CiroTry">
+							<table:template>
+								<Text text="{mainModel>CiroTry}"/>
+							</table:template>
+						</table:Column>
+					</table:columns>
+				</table:Table>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>
