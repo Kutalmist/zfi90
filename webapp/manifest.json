@@ -41,6 +41,8 @@
 	},
 
 	"sap.ui5": {
+		"config": { "fullWidth": true },
+		
 		"rootView": {
 			"viewName": "com.sadal.zfi90.view.App",
 			"type": "XML",
