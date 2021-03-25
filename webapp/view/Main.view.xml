@@ -3,110 +3,32 @@
 	<Page showHeader="false">
 		<content>
 			<VBox class="sapUiContentPadding">
-				<!--Filtre degeleri-->
-				<FlexBox class="columns">
+				<!--Filtre değerleri-->
+				<Panel id="filterPanel" headerText="{i18n>filtreler}" expandable="true" expanded="true">
 					<form:SimpleForm id="frmFilter" maxContainerCols="3" editable="true" layout="ResponsiveGridLayout" labelSpanL="5" labelSpanM="5"
 						emptySpanL="0" emptySpanM="0" columnsL="3" columnsM="3">
 						<core:Title text=""/>
 						<Label text="{i18n>musteri}"/>
-						<Input value="{mainModel>/Musteri}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onMusteriSearchHelp"/>
+						<Input value="{mainModel>/Kunnr}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onKunnrSearchHelp"/>
 						<Label text="{i18n>musteriTemsilcisi}"/>
-						<Input value="{mainModel>/MusteriTemsilcisi}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onMusteriTemsilcisiSearchHelp"/>
+						<Input id="VkgrpInput" value="{mainModel>/Vkgrp}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onSearchHelp"/>
 						<Label text="{i18n>statusu}"/>
-						<Input value="{mainModel>/Statusu}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onStatusSearchHelp"/>
+						<Input id="Bran1Input" value="{mainModel>/Bran1}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onSearchHelp"/>
 						<Label text="{i18n>il}"/>
-						<Input value="{mainModel>/Il}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onIlSearchHelp"/>
+						<Input id="RegioInput" value="{mainModel>/Regio}" showValueHelp="true" valueHelpOnly="false" valueHelpRequest="onSearchHelp"/>
 						<Label/>
-						<Button text="{i18n>listele}" width="7rem" press="onPressListele"/>
+						<Button text="{i18n>listele}" width="7rem" type="Emphasized" press="onPressListele"/>
 						<form:layoutData>
 							<FlexItemData growFactor="1" baseSize="0" styleClass="sapUiTinyMargin"/>
 						</form:layoutData>
 						<core:Title text=""/>
 					</form:SimpleForm>
-				</FlexBox>
-				<!--Liste-->
+				</Panel>
 
-				<!-- <Table items="{mainModel>/MusteriKrediLimitListesi}" inset="false" alternateRowColors="true" mode="None" sticky="ColumnHeaders">
-					<columns>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>musteri}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>statusu}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>tanim}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>musteriTemsilcisi}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>ad}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>ikinciAd}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>sokak}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>ilce}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>il}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>vergiDairesi}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>vergiKimlikNo}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>tcKimlikNo}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>telefon}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>faks}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>mobilTelefon}"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="{i18n>bekleyenSiparisleriTry}"/>
-						</Column>
-					</columns>
-					<items>
-						<ColumnListItem>
-							<cells>
-								<Text text="{mainModel>musteri}"/>
-								<Text text="{mainModel>statusu}"/>
-								<Text text="{mainModel>tanim}"/>
-								<Text text="{mainModel>musteriTemsilcisi}"/>
-								<Text text="{mainModel>ad}"/>
-								<Text text="{mainModel>ikinciAd}"/>
-								<Text text="{mainModel>sokak}"/>
-								<Text text="{mainModel>ilce}"/>
-								<Text text="{mainModel>il}"/>
-								<Text text="{mainModel>vergiDairesi}"/>
-								<Text text="{mainModel>vergiKimlikNo}"/>
-								<Text text="{mainModel>tcKimlikNo}"/>
-								<Text text="{mainModel>telefon}"/>
-								<Text text="{mainModel>faks}"/>
-								<Text text="{mainModel>mobilTelefon}"/>
-								<Text text="{mainModel>bekleyenSiparisleriTry}"/>
-							</cells>
-						</ColumnListItem>
-					</items>
-				</Table> -->
-
-
-
+				<!--Tablo-->
 
 				<table:Table selectionMode="None" enableColumnReordering="false" ariaLabelledBy="title"
-				rows="{mainModel>/MusteriKrediLimitListesi}" showNoData="true" noData="{i18n>noRecordFoundText}"
-				>
+				rows="{mainModel>/MusteriKrediLimitListesi}" showNoData="true" noData="{i18n>noRecordFoundText}">
 					<table:columns>
 						<table:Column width="10rem" label="{i18n>musteri}" filterProperty="Kunnr" sortProperty="Kunnr">
 							<table:template>

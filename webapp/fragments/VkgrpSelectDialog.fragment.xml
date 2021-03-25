@@ -1,0 +1,23 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		title="{i18n>musteriTemsilcisiSec}"
+		search="onSearchHelpSearch"
+		confirm="onSearchHelpClose"
+		cancel="onSearchHelpClose"
+		showClearButton="true"
+		items="{
+			path: '/SearchHelpData',
+			sorter: {
+				path: 'Bezei',
+				descending: false
+			}
+		}">
+		<StandardListItem
+			selected="{selected}"
+			title="{Bezei}"
+			description="{Vkgrp}"
+			type="Active" />
+	</SelectDialog>
+</core:FragmentDefinition>

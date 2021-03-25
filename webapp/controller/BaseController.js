@@ -260,6 +260,14 @@ sap.ui.define([
 			this.onCreateDeepEntity("/GetMusteriKrediLimitiSet", oEntry, null, successFn);
 		},
 
+		getZfi90SearchHelp: function(oEntry, successFn) {
+			this.onCreateDeepEntity("/GetZfi90SearchHelpSet", oEntry, null, successFn);
+		},
+
+		getKunnrSearchHelp: function(oEntry, successFn) {
+			this.onCreateDeepEntity("/GetKunnrSearchHelpSet", oEntry, null, successFn);
+		},
+
 		/**
 		 * Event handler when the share by E-Mail button has been clicked
 		 * @public

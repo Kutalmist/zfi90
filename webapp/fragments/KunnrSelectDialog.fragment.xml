@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog title="{i18n>musteriSec}" class="sapUiPopupWithPadding">
+		<VBox>
+			<RadioButtonGroup
+				id="kunnrRadioGroup"
+				columns="2"
+				selectedIndex="1">
+				<buttons>
+					<RadioButton
+						groupName="kunnrSearchRadioGroup"
+						id="kunnrRadioButton"
+						selected="false"
+						text="{i18n>musteriKodu}">
+					</RadioButton>
+					<RadioButton
+						groupName="kunnrSearchRadioGroup"
+						id="nameRadioButton"
+						selected="true"
+						text="{i18n>musteri}">
+					</RadioButton>
+				</buttons>
+			</RadioButtonGroup>
+			<Label design="Bold" text="{i18n>adVeyaMusteriKodunaGoreAra}" />
+			<SearchField id="idSearchField" width="100%" value="{/kunnrSearchField}" search="onKunnrSelectDialogSearchBtnPress" />
+			<Button text="{i18n>ara}" press="onKunnrSelectDialogSearchBtnPress" />
+			<List id="idKunnrSelectList" items="{ path: '/SearchHelpData', sorter: { path: 'Bezei' } }">
+				<items>
+					<StandardListItem title="{Name1} {Name2}" description="{Kunnr}" type="Active" press="onSelectKunnr"/>
+				</items>
+			</List>
+		</VBox>
+		<buttons>
+			<Button text="{i18n>kapat}" press="onKunnrSelectDialogClose"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

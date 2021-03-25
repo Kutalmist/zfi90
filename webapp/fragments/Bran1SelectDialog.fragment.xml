@@ -1,0 +1,23 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		title="{i18n>statusuSec}"
+		search="onSearchHelpSearch"
+		confirm="onSearchHelpClose"
+		cancel="onSearchHelpClose"
+		showClearButton="true"
+		items="{
+			path: '/SearchHelpData',
+			sorter: {
+				path: 'Vtext',
+				descending: false
+			}
+		}">
+		<StandardListItem
+			selected="{selected}"
+			title="{Vtext}"
+			description="{Braco}"
+			type="Active" />
+	</SelectDialog>
+</core:FragmentDefinition>
