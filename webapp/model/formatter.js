@@ -69,7 +69,12 @@ sap.ui.define([], function () {
 			case "I":
 				return "Success";
 			}
-		}
+		},
+
+		leftZeroDelete: function (value) {
+			value = value + "";
+			return value.replace(/^0+/, '');
+		},
 
 	};
 

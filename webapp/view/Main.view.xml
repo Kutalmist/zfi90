@@ -32,7 +32,7 @@
 					<table:columns>
 						<table:Column width="8rem" label="{i18n>musteri}" filterProperty="Kunnr" sortProperty="Kunnr">
 							<table:template>
-								<Text text="{mainModel>Kunnr}"/>
+								<Text text="{path: 'mainModel>Kunnr', formatter: '.formatter.leftZeroDelete'}"/>
 							</table:template>
 						</table:Column>
 						<table:Column width="8rem" label="{i18n>statusu}" filterProperty="Bran1" sortProperty="Bran1">
