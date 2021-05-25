@@ -30,7 +30,7 @@
 				<table:Table selectionMode="None" enableColumnReordering="false" ariaLabelledBy="title"
 				rows="{mainModel>/MusteriKrediLimitListesi}" showNoData="true" noData="{i18n>noRecordFoundText}">
 					<table:columns>
-						<table:Column width="10rem" label="{i18n>musteri}" filterProperty="Kunnr" sortProperty="Kunnr">
+						<table:Column width="8rem" label="{i18n>musteri}" filterProperty="Kunnr" sortProperty="Kunnr">
 							<table:template>
 								<Text text="{mainModel>Kunnr}"/>
 							</table:template>
@@ -40,7 +40,7 @@
 								<Text text="{mainModel>Bran1}"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="8rem" label="{i18n>tanim}" filterProperty="Vtext" sortProperty="Vtext">
+						<table:Column width="12rem" label="{i18n>tanim}" filterProperty="Vtext" sortProperty="Vtext">
 							<table:template>
 								<Text text="{mainModel>Vtext}"/>
 							</table:template>
@@ -50,7 +50,7 @@
 								<Text text="{mainModel>Bezei}"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="10rem" label="{i18n>ad}" filterProperty="Name1" sortProperty="Name1">
+						<table:Column width="18rem" label="{i18n>ad}" filterProperty="Name1" sortProperty="Name1">
 							<table:template>
 								<Text text="{mainModel>Name1}"/>
 							</table:template>
@@ -60,7 +60,7 @@
 								<Text text="{mainModel>Name2}"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="8rem" label="{i18n>sokak}" filterProperty="Street" sortProperty="Street">
+						<table:Column width="18rem" label="{i18n>sokak}" filterProperty="Street" sortProperty="Street">
 							<table:template>
 								<Text text="{mainModel>Street}"/>
 							</table:template>
@@ -107,7 +107,7 @@
 						</table:Column>
 						<table:Column width="12rem" label="{i18n>bekleyenSiparisleriTry}" filterProperty="CiroTry" sortProperty="CiroTry">
 							<table:template>
-								<Text text="{mainModel>CiroTry}"/>
+								<Text text="{path: 'mainModel>CiroTry', type:'sap.ui.model.type.Integer', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
 							</table:template>
 						</table:Column>
 					</table:columns>
