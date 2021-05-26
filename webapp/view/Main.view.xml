@@ -30,6 +30,11 @@
 				<table:Table selectionMode="None" enableColumnReordering="false" ariaLabelledBy="title"
 				rows="{mainModel>/MusteriKrediLimitListesi}" showNoData="true" noData="{i18n>noRecordFoundText}">
 					<table:columns>
+						<table:Column width="6rem" label="{i18n>pdfCiktisi}" filterProperty="Kunnr" sortProperty="Kunnr">
+							<table:template>
+								<Button icon="sap-icon://pdf-attachment" tooltip="{i18n>pdfCiktisi}" press="onCiktiAl" />
+							</table:template>
+						</table:Column>
 						<table:Column width="8rem" label="{i18n>musteri}" filterProperty="Kunnr" sortProperty="Kunnr">
 							<table:template>
 								<Text text="{path: 'mainModel>Kunnr', formatter: '.formatter.leftZeroDelete'}"/>

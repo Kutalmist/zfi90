@@ -164,5 +164,15 @@ sap.ui.define([
 			that.getMusteriKrediLimitiIzlemeListesi(oEntry, this.handlerData);
 		},
 
+		onCiktiAl: function (oEvent) {
+			var oPath = oEvent.oSource.oParent.oBindingContexts.mainModel.sPath;
+			var item = this.oMainModel.getProperty(oPath);
+			var host = window.location.host;
+			var protocol = window.location.protocol;
+			var sLink = protocol + "//" + host + "/sap/opu/odata/sap/ZFI_GW_001_SRV/PdfCiktisiSet(IKunnr='" + item.Kunnr +"')/$value";
+
+			window.open(sLink, "PDF File", "height=600,width=800");
+		}
+
 	});
 });
