@@ -27,7 +27,7 @@
 
 				<!--Tablo-->
 
-				<table:Table selectionMode="None" enableColumnReordering="false" ariaLabelledBy="title"
+				<table:Table id="tableId" selectionMode="None" enableColumnReordering="false" ariaLabelledBy="title"
 				rows="{mainModel>/MusteriKrediLimitListesi}" showNoData="true" noData="{i18n>noRecordFoundText}">
 					<table:columns>
 						<table:Column width="4rem" label="{i18n>PDF}" filterProperty="Kunnr" sortProperty="Kunnr">
@@ -40,21 +40,6 @@
 								<Text text="{path: 'mainModel>Kunnr', formatter: '.formatter.leftZeroDelete'}"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="5rem" label="{i18n>statusu}" filterProperty="Bran1" sortProperty="Bran1">
-							<table:template>
-								<Text text="{mainModel>Bran1}"/>
-							</table:template>
-						</table:Column>
-						<table:Column width="12rem" label="{i18n>tanim}" filterProperty="Vtext" sortProperty="Vtext">
-							<table:template>
-								<Text text="{mainModel>Vtext}"/>
-							</table:template>
-						</table:Column>
-						<table:Column width="12rem" label="{i18n>musteriTemsilcisi}" filterProperty="Bezei" sortProperty="Bezei">
-							<table:template>
-								<Text text="{mainModel>Bezei}"/>
-							</table:template>
-						</table:Column>
 						<table:Column width="18rem" label="{i18n>ad}" filterProperty="Name1" sortProperty="Name1">
 							<table:template>
 								<Text text="{mainModel>Name1}"/>
@@ -65,54 +50,33 @@
 								<Text text="{mainModel>Name2}"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="18rem" label="{i18n>sokak}" filterProperty="Street" sortProperty="Street">
+						<table:Column width="10rem" label="{i18n>netCiro}" filterProperty="NetCiro" sortProperty="NetCiro">
 							<table:template>
-								<Text text="{mainModel>Street}"/>
+								<!-- <Text text="{mainModel>Ciro}"/> -->
+								<Text text="{path: 'mainModel>Ciro', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="8rem" label="{i18n>ilce}" filterProperty="City2" sortProperty="City2">
+						<table:Column width="12rem" label="{i18n>bekleyenSiparisleriTry}" filterProperty="AcSip" sortProperty="AcSip">
 							<table:template>
-								<Text text="{mainModel>City2}"/>
+								<Text text="{path: 'mainModel>AcSip', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="8rem" label="{i18n>il}" filterProperty="City1" sortProperty="City1">
+						<table:Column width="10rem" label="{i18n>cariHesapBakiyesi}" filterProperty="CariHesapBakiyesi" sortProperty="CariHesapBakiyesi">
 							<table:template>
-								<Text text="{mainModel>City1}"/>
+								<!-- <Text text="{mainModel>Ch}"/> -->
+								<Text text="{path: 'mainModel>Ch', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="8rem" label="{i18n>vergiDairesi}" filterProperty="Stcd1" sortProperty="Stcd1">
+						<table:Column width="10rem" label="{i18n>toplamLimit}" filterProperty="CarHesLim" sortProperty="CarHesLim">
 							<table:template>
-								<Text text="{mainModel>Stcd1}"/>
+								<!-- <Text text="{mainModel>CarHesLim}"/> -->
+								<Text text="{path: 'mainModel>CarHesLim', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="8rem" label="{i18n>vergiKimlikNo}" filterProperty="Stcd2" sortProperty="Stcd2">
+						<table:Column width="10rem" label="{i18n>kullanilabilirLimit}" filterProperty="KulCarLim" sortProperty="KulCarLim">
 							<table:template>
-								<Text text="{mainModel>Stcd2}"/>
-							</table:template>
-						</table:Column>
-						<table:Column width="8rem" label="{i18n>tcKimlikNo}" filterProperty="Stcd3" sortProperty="Stcd3">
-							<table:template>
-								<Text text="{mainModel>Stcd3}"/>
-							</table:template>
-						</table:Column>
-						<table:Column width="8rem" label="{i18n>telefon}" filterProperty="TelNumber" sortProperty="TelNumber">
-							<table:template>
-								<Text text="{mainModel>TelNumber}"/>
-							</table:template>
-						</table:Column>
-						<table:Column width="8rem" label="{i18n>faks}" filterProperty="FaxNumber" sortProperty="FaxNumber">
-							<table:template>
-								<Text text="{mainModel>FaxNumber}"/>
-							</table:template>
-						</table:Column>
-						<table:Column width="8rem" label="{i18n>mobilTelefon}" filterProperty="MobNumber" sortProperty="MobNumber">
-							<table:template>
-								<Text text="{mainModel>MobNumber}"/>
-							</table:template>
-						</table:Column>
-						<table:Column width="12rem" label="{i18n>bekleyenSiparisleriTry}" filterProperty="CiroTry" sortProperty="CiroTry">
-							<table:template>
-								<Text text="{path: 'mainModel>CiroTry', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
+								<!-- <Text text="{mainModel>KulCarLim}"/> -->
+								<Text text="{path: 'mainModel>KulCarLim', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
 							</table:template>
 						</table:Column>
 					</table:columns>
