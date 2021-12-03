@@ -32,6 +32,7 @@ sap.ui.define([
 
 		reset: function() {
 			that.oMainModel.setProperty("/MusteriKrediLimitListesi", []);
+			that.oMainModel.setProperty("/AktifBayiler",true);
 		},
 
 		onKunnrSearchHelp: function(oEvent) {
@@ -46,9 +47,10 @@ sap.ui.define([
 		},
 
 		onKunnrSelectDialogSearchBtnPress: function(oEvent) {
+			var aktif=that.oMainModel.getProperty("/AktifBayiler");
 			var query = that.oMainModel.getProperty("/kunnrSearchField");
 			var selectedRadioButtonId = sap.ui.getCore().byId("kunnrRadioGroup").getSelectedButton().getId();
-			var oEntry = models.kunnrSearchHelpModel(selectedRadioButtonId, query);
+			var oEntry = models.kunnrSearchHelpModel(selectedRadioButtonId,aktif, query);
 
 			this.getKunnrSearchHelp(oEntry, function(oData) {
 				that.oMainModel.setProperty("/SearchHelpData", oData.NavExpResultKunnrSearchHelp.results);

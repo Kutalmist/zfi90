@@ -110,7 +110,7 @@ sap.ui.define([
 			return aFilters;
 		},
 
-		kunnrSearchHelpModel: function(fieldId, query) {
+		kunnrSearchHelpModel: function(fieldId,aktif, query) {
 			var filter = [{
 				Sign: "I",
 				Option: "CP",
@@ -120,6 +120,7 @@ sap.ui.define([
 			
 			var oEntry = {
 				Value: "",
+				IAktif: aktif ? "X" : "",
 				NavImpKunnrKunnrSearchHelp: fieldId.indexOf("kunnr") > -1 ? filter : [],
 				NavImpNameKunnrSearchHelp: fieldId.indexOf("name") > -1 ? filter : [],
 				NavExpResultKunnrSearchHelp: []

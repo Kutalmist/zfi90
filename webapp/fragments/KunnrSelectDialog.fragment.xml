@@ -1,5 +1,16 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
 	<Dialog title="{i18n>musteriSec}" class="sapUiPopupWithPadding">
+	 <customHeader>
+            <Bar>
+                <contentLeft></contentLeft>
+                <contentMiddle>
+                    <Label text="{i18n>musteriSec}"></Label>
+                </contentMiddle>
+                <contentRight>
+                   	<CheckBox text="{i18n>aktifb}" selected="{/AktifBayiler}" />
+                </contentRight>
+            </Bar>
+        </customHeader>
 		<VBox>
 			<RadioButtonGroup
 				id="kunnrRadioGroup"
