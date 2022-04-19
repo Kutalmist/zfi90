@@ -61,12 +61,32 @@
 								<Text text="{path: 'mainModel>AcSip', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
 							</table:template>
 						</table:Column>
+
+
+						<table:Column width="10rem" label="{i18n>vadesigecensip}" filterProperty="VadeGcnSure" sortProperty="VadeGcnSure">
+							<table:template>
+								<!-- <Text text="{mainModel>VadeGcnSure}"/> -->
+								<Text text="{path: 'mainModel>VadeGcnSure', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
+							</table:template>
+						</table:Column>
+
+
 						<table:Column width="10rem" label="{i18n>cariHesapBakiyesi}" filterProperty="CariHesapBakiyesi" sortProperty="CariHesapBakiyesi">
 							<table:template>
 								<!-- <Text text="{mainModel>Ch}"/> -->
 								<Text text="{path: 'mainModel>Ch', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
 							</table:template>
 						</table:Column>
+
+
+						<table:Column width="10rem" label="{i18n>dbsnakdiriski}" filterProperty="NrAmount" sortProperty="NrAmount">
+							<table:template>
+								<!-- <Text text="{mainModel>NrAmount}"/> -->
+								<Text text="{path: 'mainModel>NrAmount', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
+							</table:template>
+						</table:Column>
+
+
 						<table:Column width="10rem" label="{i18n>toplamLimit}" filterProperty="CarHesLim" sortProperty="CarHesLim">
 							<table:template>
 								<!-- <Text text="{mainModel>CarHesLim}"/> -->

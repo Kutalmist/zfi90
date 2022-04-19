@@ -10,7 +10,7 @@ module.exports = function (grunt){
         nwabap_ui5uploader: {
             options: {
                 conn: {
-                    server: "http://fioritserver.sadal.local:8000",
+                    server: "https://fioritserver.sadal.com.tr:44300/",
                     client: "100",
                     useStrictSSL: false
                 },

@@ -245,8 +245,8 @@
                     <End EntitySet="expBapiReturnSet" Role="ToRole_AssExpBapiReturn"/>
                 </AssociationSet>
             </EntityContainer>
-            <atom:link rel="self" href="http://fioritserver.sadal.local:8000/sap/opu/odata/sap/ZFI_GW_001_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
-            <atom:link rel="latest-version" href="http://fioritserver.sadal.local:8000/sap/opu/odata/sap/ZFI_GW_001_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="self" href="http://fioriserver.sadal.com.tr:44300/sap/opu/odata/sap/ZFI_GW_001_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://fioriserver.sadal.com.tr:44300/sap/opu/odata/sap/ZFI_GW_001_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

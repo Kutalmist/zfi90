@@ -22,7 +22,7 @@ server:
     configuration:
       backend:
       - path: /sap
-        url: http://fioritserver.sadal.local:8000
+        url: https://fioritserver.sadal.com.tr:44300/
   - name: fiori-tools-appreload
     afterMiddleware: compression
     configuration:
