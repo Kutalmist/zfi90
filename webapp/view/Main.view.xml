@@ -45,25 +45,25 @@
 								<Text text="{mainModel>Name1}"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="10rem" label="{i18n>ikinciAd}" filterProperty="Name2" sortProperty="Name2">
+						<table:Column width="5rem" label="{i18n>ikinciAd}" filterProperty="Name2" sortProperty="Name2">
 							<table:template>
 								<Text text="{mainModel>Name2}"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="10rem" label="{i18n>netCiro}" filterProperty="NetCiro" sortProperty="NetCiro">
+						<table:Column width="10rem" label="{i18n>netCiro}" hAlign="End" filterProperty="NetCiro" sortProperty="NetCiro">
 							<table:template>
 								<!-- <Text text="{mainModel>Ciro}"/> -->
 								<Text text="{path: 'mainModel>Ciro', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="12rem" label="{i18n>bekleyenSiparisleriTry}" filterProperty="AcSip" sortProperty="AcSip">
+						<table:Column width="12rem" label="{i18n>bekleyenSiparisleriTry}" hAlign="End" filterProperty="AcSip" sortProperty="AcSip">
 							<table:template>
 								<Text text="{path: 'mainModel>AcSip', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
 							</table:template>
 						</table:Column>
 
 
-						<table:Column width="10rem" label="{i18n>vadesigecensip}" filterProperty="VadeGcnSure" sortProperty="VadeGcnSure">
+						<table:Column width="10rem" label="{i18n>vadesigecensip}" hAlign="End" filterProperty="VadeGcnSure" sortProperty="VadeGcnSure">
 							<table:template>
 								<!-- <Text text="{mainModel>VadeGcnSure}"/> -->
 								<Text text="{path: 'mainModel>VadeGcnSure', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
@@ -71,7 +71,7 @@
 						</table:Column>
 
 
-						<table:Column width="10rem" label="{i18n>cariHesapBakiyesi}" filterProperty="CariHesapBakiyesi" sortProperty="CariHesapBakiyesi">
+						<table:Column width="10rem" label="{i18n>cariHesapBakiyesi}" hAlign="End" filterProperty="CariHesapBakiyesi" sortProperty="CariHesapBakiyesi">
 							<table:template>
 								<!-- <Text text="{mainModel>Ch}"/> -->
 								<Text text="{path: 'mainModel>Ch', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
@@ -79,7 +79,7 @@
 						</table:Column>
 
 
-						<table:Column width="10rem" label="{i18n>dbsnakdiriski}" filterProperty="NrAmount" sortProperty="NrAmount">
+						<table:Column width="10rem" label="{i18n>dbsnakdiriski}" hAlign="End" filterProperty="NrAmount" sortProperty="NrAmount">
 							<table:template>
 								<!-- <Text text="{mainModel>NrAmount}"/> -->
 								<Text text="{path: 'mainModel>NrAmount', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
@@ -87,13 +87,13 @@
 						</table:Column>
 
 
-						<table:Column width="10rem" label="{i18n>toplamLimit}" filterProperty="CarHesLim" sortProperty="CarHesLim">
+						<table:Column width="10rem" label="{i18n>toplamLimit}" hAlign="End" filterProperty="CarHesLim" sortProperty="CarHesLim">
 							<table:template>
 								<!-- <Text text="{mainModel>CarHesLim}"/> -->
 								<Text text="{path: 'mainModel>CarHesLim', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
 							</table:template>
 						</table:Column>
-						<table:Column width="10rem" label="{i18n>kullanilabilirLimit}" filterProperty="KulCarLim" sortProperty="KulCarLim">
+						<table:Column width="10rem" label="{i18n>kullanilabilirLimit}" hAlign="End" filterProperty="KulCarLim" sortProperty="KulCarLim">
 							<table:template>
 								<!-- <Text text="{mainModel>KulCarLim}"/> -->
 								<Text text="{path: 'mainModel>KulCarLim', type:'sap.ui.model.type.Float', formatOptions : { groupingEnabled: true, groupingSeparator: '.', decimalSeparator : ',', minFractionDigits: 2, maxFractionDigits: 2} }"/>
