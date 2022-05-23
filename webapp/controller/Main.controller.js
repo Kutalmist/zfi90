@@ -21,12 +21,21 @@ sap.ui.define([
 			this.oMainModel.setSizeLimit(99999);
 
 			this.i18nModel = this.getOwnerComponent().getModel("i18n");
-
+			this._mViewSettingsDialogs = {};
 			this.reset();
 		},
 
 		handlerData: function(oData){
 			console.log(oData);
+			oData.NavExpAlv.results.forEach(function(item){
+				item.KulCarLim = item.KulCarLim ? Number(item.KulCarLim) : item.KulCarLim;
+				item.CarHesLim = item.CarHesLim ? Number(item.CarHesLim) : item.CarHesLim;
+				item.NrAmount = item.NrAmount ? Number(item.NrAmount) : item.NrAmount;
+				item.Ch = item.Ch ? Number(item.Ch) : item.Ch;
+				item.VadeGcnSure = item.VadeGcnSure ? Number(item.VadeGcnSure) : item.VadeGcnSure;
+				item.AcSip = item.AcSip ? Number(item.AcSip) : item.AcSip;
+				item.Ciro = item.Ciro ? Number(item.Ciro) : item.Ciro;
+			})
 			that.oMainModel.setProperty("/MusteriKrediLimitListesi", oData.NavExpAlv.results);
 		},
 
@@ -174,7 +183,12 @@ sap.ui.define([
 			var sLink = protocol + "//" + host + "/sap/opu/odata/sap/ZFI_GW_001_SRV/PdfCiktisiSet(IKunnr='" + item.Kunnr +"')/$value";
 
 			window.open(sLink, "PDF File", "height=600,width=800");
-		}
+		},
+		handleButtonPressed: function(oEvent) {
+			var param = oEvent.getSource().data("param");
+			this.createViewSettingsDialog("com.sadal.zfi90.view.fragments." + param, "tableId",
+				"tableColonList_ID").open();
+		},
 
 	});
 });
