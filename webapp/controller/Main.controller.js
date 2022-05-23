@@ -35,6 +35,7 @@ sap.ui.define([
 				item.VadeGcnSure = item.VadeGcnSure ? Number(item.VadeGcnSure) : item.VadeGcnSure;
 				item.AcSip = item.AcSip ? Number(item.AcSip) : item.AcSip;
 				item.Ciro = item.Ciro ? Number(item.Ciro) : item.Ciro;
+				
 			})
 			that.oMainModel.setProperty("/MusteriKrediLimitListesi", oData.NavExpAlv.results);
 		},
